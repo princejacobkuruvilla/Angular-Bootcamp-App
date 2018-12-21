@@ -1,0 +1,7 @@
+<p>
+  video-player works!
+</p>
+<div *ngIf="selectedVideoDetails">
+   <!-- {{selectedVideoDetails.title}} -->
+   <img [src]="'http://img.youtube.com/vi/' + selectedVideoDetails.id + '/0.jpg'" [alt]="selectedVideoDetails.title">
+</div>

@@ -1,0 +1,7 @@
+<p style="text-align:center;font-family:Arial, Helvetica, sans-serif">
+  List of videos
+</p>
+
+<div *ngFor="let v of videoList;" (click)="pickVideo(v)" [class.highlight]="v.id === videoid">
+  <app-video-item [v]=v></app-video-item>
+</div>

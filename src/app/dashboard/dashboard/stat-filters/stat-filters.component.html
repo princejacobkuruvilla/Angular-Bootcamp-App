@@ -1,0 +1,31 @@
+<p>
+  stat-filters works!
+</p>
+<div>
+<form [formGroup]="details">
+  <div class="three-across">
+    <div>
+      <label for="age">Age</label>
+      <input id="age" type="text" formControlName="age">
+      <div *ngIf="details.get('age')?.hasError('required') && details.get('age')?.touched">
+        Please enter age
+      </div>
+    </div>
+    <div>
+      <label for="region">Region</label>
+      <input id="region" type="text" formControlName="region">
+      <div *ngIf="details.get('region')?.hasError('required') && details.get('region')?.touched">
+        Please enter region
+      </div>
+    </div>
+    <div>
+      <label for="date">Date</label>
+      <input id="date" type="text" formControlName="date">
+      <div *ngIf="details.get('date')?.hasError('maxlength') && details.get('date')?.touched">
+        Only 10 characters please
+      </div>
+    </div>
+  </div>
+  <button class="btn" [disabled]="!details.valid" [class.disabled]="!details.valid">Save</button>
+</form>
+</div>

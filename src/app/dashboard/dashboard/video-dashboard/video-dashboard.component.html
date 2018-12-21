@@ -1,0 +1,3 @@
+<app-video-list [videoList]="videoList | async" (selectVideo)="selectedVideo = $event"></app-video-list>
+<app-video-player [selectedVideoDetails]="selectedVideo"></app-video-player>
+<app-stat-filters [selectedVideoDetails]="selectedVideo"></app-stat-filters>

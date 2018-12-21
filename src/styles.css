@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.highlight {
+  background-color:rebeccapurple;
+}
+
+.preview {
+  padding: 5px;
+  margin: 5px;
+}
